@@ -1,5 +1,5 @@
 CREATE TABLE Department (
-    dep_title VARCHAR(50) NOT NULL,
+    dep_title VARCHAR(50) UNIQUE NOT NULL,
     dep_desc VARCHAR(100) NOT NULL,
     dep_path VARCHAR(100) NOT NULL,
     dep_parent VARCHAR(50),
@@ -9,7 +9,7 @@ CREATE TABLE Department (
 );
 
 CREATE TABLE Product (
-   prod_title VARCHAR(50) NOT NULL,
+   prod_title VARCHAR(50) UNIQUE NOT NULL,
    prod_desc VARCHAR(100) NOT NULL,
    prod_price INTEGER NOT NULL,
    prod_tax INTEGER NOT NULL,
@@ -22,7 +22,7 @@ CREATE TABLE Product (
 );
 
 CREATE TABLE User (
-   user_ssn VARCHAR(50) NOT NULL,
+   user_ssn VARCHAR(50) UNIQUE NOT NULL,
    user_name VARCHAR(50) NOT NULL,
    user_pass VARCHAR(50) NOT NULL,
    user_email VARCHAR(50) NOT NULL,
